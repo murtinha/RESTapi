@@ -1,8 +1,8 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config.from_object('config')
+app.config.from_object('config.BaseConfig')
 db = SQLAlchemy(app) 
 
 # TABLE
@@ -36,9 +36,10 @@ def test_port():
 
 @app.route('/create', methods = ['POST'])
 def create():
-	username = request.form['username']
-	age = request.form['age']
-	email = request.form['email']
+	data = request.get_json()
+	username = data['username']
+	age = data['age']
+	email = data['email']
 
 	dbcreate = Profile(username, age, email)
 	db.session.add(dbcreate)
@@ -56,12 +57,12 @@ def remove(name):
 		db.session.delete(dbdelete)
 		db.session.commit()
 		print 'User Deleted'
-		return 'User Deleted  '
+		return 'User Deleted'
 	else:
 		db.session.query(Profile).delete()
 		db.session.commit()
 		print 'List Deleted'
-		return 'List Deleted  '	
+		return 'List Deleted'	
 # UPDATE
 
 @app.route('/update/<name>', methods = ['PUT'])
@@ -72,7 +73,7 @@ def update(name):
 	dbupdate.email = request.form['email']
 	db.session.commit()
 	print 'User Updated'
-	return 'Updated    '
+	return 'User Updated'
 
 # READ
 
@@ -82,8 +83,10 @@ def read(name):
 	if name:
 		dbread = Profile.query.filter_by(username = name).first()
 		print 'Username %s, Age %d, Email %s' % (dbread.username, dbread.age, dbread.email)
-		return 'Username %s, Age %d, Email %s   ' % (dbread.username, dbread.age, dbread.email)
+		return jsonify(email = dbread.email,
+			    	   username = dbread.username,
+			    	   age= dbread.age  )
 	else:
 		dbreadall = Profile.query.all()
 		print dbreadall
-		return 'All List   '
+		return 'Whole List'
