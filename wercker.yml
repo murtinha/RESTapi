@@ -51,6 +51,6 @@ build:
           echo "pip version $(pip --version) running"
 
     - script:
-    	  name: python unit test
-    	  code: |
-    	    python tests.py
+        name: python testing
+        code: |
+          python tests.py
