@@ -32,7 +32,7 @@ class Profile(db.Model):
 def test_port():
 	return 'Port Working'
 
-#CREATE
+#CREATE ------------------------------------------------------------------------------------------------------------
 
 @app.route('/create', methods = ['POST'])
 def create():
@@ -47,7 +47,7 @@ def create():
 	print 'User added'
 	return 'Added   '
 
-# REMOVE
+# REMOVE ------------------------------------------------------------------------------------------------------------
 
 @app.route('/remove' , methods = ['DELETE'], defaults = {'name':None})
 @app.route('/remove/<name>', methods = ['DELETE'])
@@ -63,7 +63,8 @@ def remove(name):
 		db.session.commit()
 		print 'List Deleted'
 		return 'List Deleted'	
-# UPDATE
+
+# UPDATE ------------------------------------------------------------------------------------------------------------
 
 @app.route('/update/<name>', methods = ['PUT'])
 def update(name):
@@ -75,7 +76,7 @@ def update(name):
 	print 'User Updated'
 	return 'User Updated'
 
-# READ
+# READ ------------------------------------------------------------------------------------------------------------
 
 @app.route('/read', defaults = {'name': None})
 @app.route('/read/<name>')

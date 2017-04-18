@@ -1,0 +1,850 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"content_type"
+			],
+			[
+				"SQ",
+				"SQLALCHEMY_DATABASE_URI"
+			],
+			[
+				"create",
+				"create_all"
+			],
+			[
+				"db",
+				"dbreadall"
+			],
+			[
+				"s",
+				"session"
+			],
+			[
+				"request",
+				"request_data"
+			],
+			[
+				"va",
+				"validators"
+			],
+			[
+				"Migra",
+				"MigrateCommand"
+			],
+			[
+				"for",
+				"foreign_keys"
+			],
+			[
+				"use",
+				"user_id"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"onc",
+				"onclick\tAttr"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"AR",
+				"arr2"
+			],
+			[
+				"arr",
+				"arr1"
+			],
+			[
+				"try",
+				"tryExepct"
+			],
+			[
+				"pr",
+				"printedOut"
+			],
+			[
+				"p",
+				"printedOut"
+			],
+			[
+				"str",
+				"strarray"
+			],
+			[
+				"fac",
+				"factorail"
+			],
+			[
+				"action",
+				"actionCreators"
+			],
+			[
+				"ac",
+				"ActionCreators"
+			],
+			[
+				"nex",
+				"nextPlans"
+			],
+			[
+				"curr",
+				"currentNextPlanIdx"
+			],
+			[
+				"sl",
+				"sliderWrapper"
+			],
+			[
+				"cur",
+				"currentNextPlanIdx"
+			],
+			[
+				"get",
+				"getSliderNode"
+			],
+			[
+				"modal",
+				"modalWrapper"
+			],
+			[
+				"span",
+				"spanAmount"
+			],
+			[
+				"spa",
+				"spanAmount"
+			],
+			[
+				"const",
+				"constraints"
+			],
+			[
+				"ren",
+				"renewConfig"
+			],
+			[
+				"has",
+				"hasAttribute"
+			],
+			[
+				"query",
+				"querySelector"
+			],
+			[
+				"mod",
+				"modalHTML"
+			],
+			[
+				"moda",
+				"modalData"
+			],
+			[
+				"mo",
+				"modalData"
+			],
+			[
+				"quer",
+				"querySelectorAll"
+			],
+			[
+				"div",
+				"divPaymentMethDiv"
+			],
+			[
+				"au",
+				"autoRenewPlan"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"ca",
+				"cancelButton"
+			],
+			[
+				"singl",
+				"single-plan"
+			],
+			[
+				"data",
+				"dataLayer"
+			],
+			[
+				"clo",
+				"clickObj"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"o",
+				"objHTML"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
+				"eve",
+				"event_name"
+			],
+			[
+				"box-modal",
+				"box-modal--opened"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"modal-fe",
+				"modal-feature-more-info-link"
+			],
+			[
+				"cli",
+				"clickObj"
+			],
+			[
+				"click",
+				"clickObj"
+			],
+			[
+				"ce",
+				"createElement"
+			],
+			[
+				"crea",
+				"createElement"
+			],
+			[
+				"be",
+				"beforeEach"
+			],
+			[
+				"slider",
+				"sliderMock"
+			],
+			[
+				"retr",
+				"returnIndex"
+			],
+			[
+				"slie",
+				"slideTo"
+			],
+			[
+				"test",
+				"testClass"
+			],
+			[
+				"lock",
+				"lockBodyScroll"
+			],
+			[
+				"bindone",
+				"bindOneTimeFeeConfigControls"
+			],
+			[
+				"bind",
+				"bindOneTimeFeeRenewSubmit"
+			],
+			[
+				"com",
+				"components"
+			],
+			[
+				"init",
+				"initSlider"
+			],
+			[
+				"bin",
+				"bindOutSideClick"
+			],
+			[
+				"b",
+				"bindEvent"
+			],
+			[
+				"co",
+				"code"
+			],
+			[
+				"features",
+				"featuresMap"
+			],
+			[
+				"html",
+				"htmlFor"
+			],
+			[
+				"feat",
+				"featuresMap"
+			],
+			[
+				"auto",
+				"autoRenewCheck"
+			],
+			[
+				"sho",
+				"showBoxLockModal"
+			],
+			[
+				"outs",
+				"outsideArea"
+			],
+			[
+				"node",
+				"nodeHTML"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.py",
+			"settings":
+			{
+				"buffer_size": 2227,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests.py",
+			"settings":
+			{
+				"buffer_size": 1717,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 372.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 361.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/eric/Desktop/RestAPI/config.py",
+		"/home/eric/Desktop/RestAPI/config.TestConfig.py",
+		"/home/eric/Desktop/RestAPI/config.TestConfig",
+		"/home/eric/Desktop/RestAPI/restapi.sublime-project",
+		"/home/eric/Downloads/RestAPI/index.py",
+		"/home/eric/Downloads/RestAPI/config.py",
+		"/home/eric/Downloads/RestAPI/tables.py",
+		"/home/eric/Downloads/flaskr/flaskr/flaskr.py",
+		"/home/eric/Downloads/flaskalchemy/app/templates/forms.html",
+		"/home/eric/Downloads/flaskalchemy/app/__init__.py",
+		"/home/eric/Downloads/flaskr/setup.py",
+		"/home/eric/Downloads/flaskalchemy/run.py",
+		"/home/eric/Downloads/flaskalchemy/app/models/tables.py",
+		"/home/eric/Downloads/flaskalchemy/storage.db",
+		"/home/eric/Downloads/flaskalchemy/app/models/__init__.py",
+		"/home/eric/Downloads/flaskalchemy/app/run.py",
+		"/home/eric/Downloads/flaskalchemy/app/controllers/__init__.py",
+		"/home/eric/Downloads/flaskalchemy/flaskalchemyapp/__init__.py",
+		"/home/eric/Downloads/flaskalchemy/flaskalchemyapp/run.py",
+		"/home/eric/Downloads/flaskalchemy/flaskalchemyapp/controllers/run.py",
+		"/home/eric/Downloads/flaskr/flaskr/templates/login.html",
+		"/home/eric/Downloads/flaskr/flaskr/templates/layout.html",
+		"/home/eric/Downloads/flaskr/flaskr/templates/show_entries.html",
+		"/home/eric/Downloads/flaskr/flaskr/schema.sql",
+		"/home/eric/Downloads/flaskr/flaskr/static/style.css",
+		"/home/eric/Downloads/flaskr/flaskr/templates/update_page.html",
+		"/home/eric/Downloads/flaskr/flaskr/flaskr.db",
+		"/home/eric/Downloads/flaskr/flaskr/templates/login_html",
+		"/home/eric/Downloads/Magic JSON cards/AllCards.json",
+		"/home/eric/Downloads/flaskr/flaskr/__init__.py",
+		"/home/eric/Downloads/flaskr/MANIFEST.in",
+		"/home/eric/Downloads/CRUD/templates/hello.html",
+		"/home/eric/Downloads/CRUD/schema.sql",
+		"/home/eric/Downloads/flaskr/CRUD/flaskr.py",
+		"/home/eric/Downloads/flaskr/crud/flasktest.pyc",
+		"/home/eric/Downloads/flaskr/CRUD/flask.py",
+		"/home/eric/Downloads/flaskr/CRUD/flasktest.py",
+		"/home/eric/Downloads/CRUD/flasktest.py",
+		"/home/eric/Downloads/python.py",
+		"/home/eric/Downloads/CRUD/application.py",
+		"/home/eric/Downloads/CRUD/flasktest.pyc",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/reducers/posts.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/components/app.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/actions/actionCreators.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/reduxstagram.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/data/posts.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/components/Photogrid.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/components/single.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/reducers/index.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/reducers/comments.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/store.js",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/package.json",
+		"/home/eric/learn-redux/Learn-Redux-Starter-Files/learn-redux/client/components/Main.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/slider.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/binds.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/register-evt.js",
+		"/home/eric/Downloads/box-modal-master/src/components/configure-one-time-fee.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/class-handlers.js",
+		"/home/eric/Downloads/box-modal-master/src/components/single-plan.js",
+		"/home/eric/Downloads/box-modal-master/src/components/multiple-plans.js",
+		"/home/eric/Downloads/box-modal-master/src/index.js",
+		"/home/eric/Downloads/box-modal-master/src/components/one-time-fee.js",
+		"/home/eric/Downloads/box-modal-master/demo/index.html",
+		"/home/eric/Downloads/box-modal-master/src/components/modal-template.js",
+		"/home/eric/Downloads/box-modal-master/src/templates/simple-plan-modal.html",
+		"/home/eric/Downloads/box-modal-master/src/templates/multiple-plans-modal.html",
+		"/home/eric/Downloads/box-modal-master/src/templates/renewal-modal.html",
+		"/home/eric/Downloads/box-modal-master/src/templates/no-plan-modal.html",
+		"/home/eric/Downloads/box-modal-master/src/templates/configure-one-time-fee-modal.html",
+		"/home/eric/Downloads/box-modal-master/src/templates/one-time-fee-renew-modal.html",
+		"/home/eric/Downloads/box-modal-master/src/templates/one-time-fee-modal.html",
+		"/home/eric/Downloads/box-modal-master/src/components/tests/tests-configure-one-time-fee.js",
+		"/home/eric/Downloads/box-modal-master/src/components/tests/tests-modal-template.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/tests/tests-slider.js",
+		"/home/eric/Downloads/box-modal-master/src/components/tests/tests-single-plan.js",
+		"/home/eric/Downloads/box-modal-master/src/tests/index.js",
+		"/home/eric/Downloads/box-modal-master/karma.conf.js",
+		"/home/eric/Downloads/box-modal-master/src/components/tests/tests-one-time-fee.js",
+		"/home/eric/Downloads/box-modal-master/src/components/tests/tests-multiple-plans.js",
+		"/home/eric/Downloads/box-modal-master/data.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/tests/tests-bind.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/tests/tests-class-handlers.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/tests/tests-register-evt.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/tests/tests-format-payment-method.js",
+		"/home/eric/Downloads/box-modal-master/src/lib/TemplateEngine.js",
+		"/home/eric/Downloads/box-modal-master/src/utils/format-payment-method.js",
+		"/home/eric/Downloads/box-modal-master/package.json",
+		"/home/eric/Downloads/box-modal-master/webpack.config.js",
+		"/home/eric/Downloads/box-modal-master/.eslintrc",
+		"/home/eric/Downloads/box-modal-master/node_modules/mocha/mocha.js",
+		"/home/eric/Downloads/box-modal-master/node_modules/chai/chai.js",
+		"/home/eric/Downloads/box-modal-master/.babelrc",
+		"/home/eric/Downloads/box-modal-master/tests/index.js",
+		"/home/eric/Downloads/box-modal-master/.eslintignore",
+		"/home/eric/Downloads/box-modal-master/.gitignore",
+		"/home/eric/Downloads/box-modal-master/wercker.yml",
+		"/home/eric/Downloads/box-modal-master/npm-debug.log",
+		"/home/eric/Downloads/box-modal-master/tests/data.js",
+		"/home/eric/Downloads/box-modal-master/dist/bundle.js",
+		"/home/eric/Downloads/box-modal-master/src/modal-template.js",
+		"/home/eric/Downloads/box-modal-master/src/configure-one-time-fee.js",
+		"/home/eric/Downloads/box-modal-master/src/multiple-plans.js",
+		"/home/eric/Downloads/box-modal-master/src/one-time-fee.js",
+		"/home/eric/Downloads/box-modal-master/src/single-plan.js",
+		"/home/eric/Downloads/box-modal-master/node_modules/lory.js/package.json",
+		"/home/eric/Downloads/box-modal-master/node_modules/mystique/README.md",
+		"/home/eric/Downloads/box-modal-master/node_modules/lory.js/src/utils/dispatch-event.js",
+		"/home/eric/Downloads/box-modal-master/node_modules/lory.js/src/utils/detect-prefixes.js",
+		"/home/eric/Downloads/box-modal-master/node_modules/lory.js/src/lory.js",
+		"/home/eric/Downloads/box-modal-master/node_modules/lory.js/test/lory.test.js",
+		"/home/eric/Downloads/box-modal-master/bower.json",
+		"/home/eric/boxModalTest/box-modal-master/webpack.config.js",
+		"/home/eric/boxModalTest/box-modal-master/src/index.js",
+		"/home/eric/Downloads/box-modal-master/bower_components/lory/webpack.config.js",
+		"/home/eric/Downloads/box-modal-master/bower_components/lory/src/lory.js",
+		"/home/eric/eslint/eslint/lib/rules/wrap-iife.js",
+		"/home/eric/Downloads/box-modal-master/node_modules/eslint-config-airbnb/index.js",
+		"/home/eric/Downloads/box-modal-master/node_modules/eslint-config-airbnb/rules/index.js",
+		"/home/eric/eslint/eslint/lib/rules/wrap--iife.js",
+		"/home/eric/eslint/eslint/lib/wrap--iife.js",
+		"/home/eric/eslint/eslint/lib/wrap--iife",
+		"/home/eric/Downloads/box-modal-master/bundle.js",
+		"/home/eric/test/box-modal-master/src/index.js",
+		"/home/eric/gitTest/box-modal-master/tests/index.js",
+		"/home/eric/Desktop/Drum-kit/main.js",
+		"/home/eric/Desktop/Drum-kit/style.css",
+		"/home/eric/Desktop/Drum-kit/index.html",
+		"/home/eric/Downloads/box-modal-master/src/scss/modal.scss"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"create",
+			"entires",
+			"flask",
+			"init",
+			"test",
+			"())",
+			"'after.lory.slide'",
+			"geta",
+			"location.hash",
+			"modal-feature-more-info-link",
+			"closeable",
+			"for",
+			"Renew",
+			"renew",
+			"noPLan",
+			"no-pl",
+			");\n",
+			"modal-feature-diff-amount",
+			"single",
+			");\n",
+			"planid",
+			"custom",
+			"multiple",
+			"hide",
+			"multiple",
+			"single",
+			"singleplan",
+			"selectedplanid",
+			"renewconfig",
+			"renewConfig",
+			"nextplans",
+			"icon",
+			"nextplans",
+			"customConfig",
+			"custonconfig",
+			"next",
+			"noplan",
+			"nextplans",
+			"customconfig",
+			"paymentmethod",
+			"trim",
+			"noplan",
+			"contactform",
+			"modal-onetimefeerenew",
+			"button",
+			"submit",
+			"only",
+			"it",
+			"chai",
+			"requi",
+			"form",
+			"modal-onetimefeerenew",
+			"auto-renew-input",
+			"modal-oneTimeFeeRenew",
+			"modal-oneTimeFeeRenew form",
+			"form",
+			"paymentMe",
+			"modal-autoRenew-cancel'",
+			"close",
+			"unlock",
+			"toggle",
+			"add",
+			"cardbra",
+			"getslide",
+			"configureOneTimeFeeData",
+			"get",
+			"obj",
+			"noPlanMOdal",
+			"showBoxLockModal",
+			"showbox",
+			"lory",
+			"require('lory",
+			"++",
+			"has",
+			"var",
+			"const",
+			"var",
+			"detail",
+			"customConfig",
+			".modal-overlay",
+			".modal-overlay[for]",
+			"modal-autoRenew-form-hide",
+			"btn--block",
+			"register",
+			"trigger",
+			"trigger_detai",
+			"btn--block",
+			"closeable",
+			"modal box-modal closeable",
+			"unclo",
+			"bindEvent",
+			"modal-overlay",
+			"modal-overlay[for]",
+			"modal-feature-close",
+			"closeability",
+			"trigger_",
+			"modal-overlay",
+			"unclo",
+			"showboxlockmodal",
+			"datafor",
+			"saveCall",
+			"flipDetailed",
+			"flip-detailed",
+			"require",
+			"callback",
+			"lockBodyScroll",
+			"initSlider",
+			"registerEvt",
+			"bindMoreInfo",
+			"bindEvent",
+			"bindMoreInfo",
+			"registerEvt",
+			"bindOutSideClick",
+			"modalHTML",
+			"node",
+			"showBoxLockModal",
+			"single",
+			"payment",
+			"auto renew",
+			"addeven",
+			"add",
+			"customConfig"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" += 1",
+			"const"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1344,
+								1344
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "tests.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								557,
+								557
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "restapi.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"utislide",
+				"~/Downloads/box-modal-master/src/utils/slider.js"
+			],
+			[
+				"testmul",
+				"src/components/tests/tests-multiple-plans.js"
+			],
+			[
+				"testformat",
+				"src/utils/tests/tests-format-payment-method.js"
+			],
+			[
+				"utibin",
+				"src/utils/binds.js"
+			],
+			[
+				"inde",
+				"~/Downloads/box-modal-master/src/index.js"
+			],
+			[
+				"",
+				"~/Downloads/box-modal-master/src/templates/simple-plan-modal.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
