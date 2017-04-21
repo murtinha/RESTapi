@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"user2"
+			],
+			[
+				"qu",
+				"queryall"
+			],
+			[
 				"con",
 				"content_type"
 			],
@@ -323,7 +331,16 @@
 			"file": "index.py",
 			"settings":
 			{
-				"buffer_size": 2227,
+				"buffer_size": 2664,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "requirements.txt",
+			"settings":
+			{
+				"buffer_size": 291,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -332,7 +349,16 @@
 			"file": "tests.py",
 			"settings":
 			{
-				"buffer_size": 1717,
+				"buffer_size": 2877,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wercker.yml",
+			"settings":
+			{
+				"buffer_size": 2011,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -390,6 +416,7 @@
 	},
 	"file_history":
 	[
+		"/home/eric/Desktop/RestAPI/tests.py",
 		"/home/eric/Desktop/RestAPI/config.py",
 		"/home/eric/Desktop/RestAPI/config.TestConfig.py",
 		"/home/eric/Desktop/RestAPI/config.TestConfig",
@@ -516,8 +543,7 @@
 		"/home/eric/gitTest/box-modal-master/tests/index.js",
 		"/home/eric/Desktop/Drum-kit/main.js",
 		"/home/eric/Desktop/Drum-kit/style.css",
-		"/home/eric/Desktop/Drum-kit/index.html",
-		"/home/eric/Downloads/box-modal-master/src/scss/modal.scss"
+		"/home/eric/Desktop/Drum-kit/index.html"
 	],
 	"find":
 	{
@@ -677,7 +703,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -686,15 +712,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2227,
+						"buffer_size": 2664,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1344,
-								1344
+								2664,
+								2664
 							]
 						],
 						"settings":
@@ -702,27 +728,55 @@
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 630.0,
+						"translation.y": 810.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "tests.py",
+					"file": "requirements.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1717,
+						"buffer_size": 291,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								557,
-								557
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "tests.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2877,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2267,
+								2267
 							]
 						],
 						"settings":
@@ -732,7 +786,37 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wercker.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1512,
+								1512
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
