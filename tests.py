@@ -1,7 +1,9 @@
 from flask import json,jsonify
-from index import app,db,Profile
+from app import app,db
+from tables import Profile
 import unittest
 from flask_testing import TestCase
+
 class BaseTestCase(TestCase):
 
 
@@ -20,8 +22,8 @@ class BaseTestCase(TestCase):
 class MyTest(BaseTestCase):
 
     def test_port(self):        
-        port = self.client.get('/')
-        assert 'Port Working' in port.data
+        port = self.client.get('/health-check')
+        assert 'It works' in port.data
     
 # CREATE ------------------------------------------------------------------------------------------------------------
 
@@ -30,7 +32,8 @@ class MyTest(BaseTestCase):
                                                                   age=24,
                                                                   email='helgod@gamcil.com')),
                                                                   content_type='application/json')
-        assert 'Added   ' in post.data
+        user_id = Profile.query.filter_by(username = 'hel').first()
+        assert ('User created with id = %d' % user_id.id) in post.data
     
 # DELETE ------------------------------------------------------------------------------------------------------------
 
@@ -41,9 +44,11 @@ class MyTest(BaseTestCase):
         db.session.commit()
         db.session.add(user2)
         db.session.commit()
+        user1query = Profile.query.filter_by(username = "Eric").first()
         user2query = Profile.query.filter_by(username = "user2").first()
-        delete = self.client.delete('/remove/Eric', data = {'username':'Eric'})
-        assert 'User Deleted'
+        user1_id = user1query.id
+        delete = self.client.delete('/remove/Eric')
+        assert ('User with id %d deleted' % user1_id)
         assert 'usr2@ff.com' in user2query.email # checking if db wasnt erased right after the delete request (as said in flask-testing documentation)
     
 # UPDATE ------------------------------------------------------------------------------------------------------------
@@ -70,6 +75,16 @@ class MyTest(BaseTestCase):
         read = self.client.get('/read')
         assert "Whole List" in read.data
 
+    def test_read_no_users(self):
+        read = self.client.get('/read')
+        assert "Theres no List" in read.data
+
+    # def test_read_user(self):
+    #     user1 = Profile('user',29,'user@gg.com')
+    #     db.session.add(user1)
+    #     db.commit()
+    #     read = self.client.get('read/user')
+    #     assert 
 
 if __name__ == '__main__':
     unittest.main()

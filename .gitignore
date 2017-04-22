@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 venv/
-index.pyc
-=======
-# Add any directories, files, or patterns you don't want to be tracked by version control
-index.pyc	
->>>>>>> f87dc2f4aff2b6e251332dbe5d9d85c936275fa2
+app.pyc
 config.pyc
 restapi.sublime-workspace
+routes.pyc
+tables.pyc

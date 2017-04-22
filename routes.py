@@ -1,36 +1,13 @@
-from flask import Flask, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
-
-app = Flask(__name__)
-app.config.from_object('config.BaseConfig')
-db = SQLAlchemy(app) 
-
-# TABLE
-class Profile(db.Model):
-
-	id = db.Column(db.Integer, primary_key = True)
-	username = db.Column(db.String, unique = True)
-	age = db.Column(db.Integer)
-	email = db.Column(db.String, unique = True)
-
-	def __init__(self, username, age, email):
-		self.username = username
-		self.age = age
-		self.email = email
-
-	def __repr__(self):
-		return '<User %r>' % self.username
-
-
-# To initialize db - python shell ( from application import db -> db.create_all())
-
+from tables import Profile
+from app import app,db
+from flask import jsonify, request
 # CRUD
 
 # SERVER TEST
 
-@app.route('/')
-def test_port():
-	return 'Port Working'
+@app.route('/health-check')
+def health_check():
+	return 'It works'
 
 #CREATE ------------------------------------------------------------------------------------------------------------
 
@@ -44,8 +21,9 @@ def create():
 	dbcreate = Profile(username, age, email)
 	db.session.add(dbcreate)
 	db.session.commit()
+	user_id = Profile.query.filter_by(username = username).first()
 	print 'User added'
-	return 'Added   '
+	return 'User created with id = %d' % user_id.id
 
 # REMOVE ------------------------------------------------------------------------------------------------------------
 
@@ -53,16 +31,15 @@ def create():
 @app.route('/remove/<name>', methods = ['DELETE'])
 def remove(name):
 	if name:
-		dbdelete =  Profile.query.filter_by(username = request.form['username']).first()
+		dbdelete =  Profile.query.filter_by(username = name).first()
+		user_id = dbdelete.id
 		db.session.delete(dbdelete)
 		db.session.commit()
 		print 'User Deleted'
-		return 'User Deleted'
+		return 'User with id %d deleted' % user_id
 	else:
-		db.session.query(Profile).delete()
-		db.session.commit()
-		print 'List Deleted'
-		return 'List Deleted'	
+		print 'Input name'
+		return 'Input name'	
 
 # UPDATE ------------------------------------------------------------------------------------------------------------
 
@@ -89,5 +66,9 @@ def read(name):
 			    	   age= dbread.age  )
 	else:
 		dbreadall = Profile.query.all()
-		print dbreadall
-		return 'Whole List'
+		if len(dbreadall) > 0:
+			print dbreadall
+			return 'Whole List' # didnt manage to return the columns
+		else:
+			print 'Theres no List'
+			return 'Theres no List'	
