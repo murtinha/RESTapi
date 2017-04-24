@@ -21,9 +21,9 @@ class BaseTestCase(TestCase):
 
 class MyTest(BaseTestCase):
 
-    def test_port(self):        
+    def health_check(self):        
         port = self.client.get('/health-check')
-        assert 'It works' in port.data
+        self.assertIn ('It works', port.data)
     
 # CREATE ------------------------------------------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ class MyTest(BaseTestCase):
                                                                   email='helgod@gamcil.com')),
                                                                   content_type='application/json')
         user_id = Profile.query.filter_by(username = 'hel').first()
-        assert ('User created with id = %d' % user_id.id) in post.data
+        self.assertIn('{"user": 1}', post.data)
     
 # DELETE ------------------------------------------------------------------------------------------------------------
 
@@ -46,10 +46,10 @@ class MyTest(BaseTestCase):
         db.session.commit()
         user1query = Profile.query.filter_by(username = "Eric").first()
         user2query = Profile.query.filter_by(username = "user2").first()
-        user1_id = user1query.id
-        delete = self.client.delete('/remove/Eric')
-        assert ('User with id %d deleted' % user1_id)
-        assert 'usr2@ff.com' in user2query.email # checking if db wasnt erased right after the delete request (as said in flask-testing documentation)
+        user2_id = user2query.id
+        delete = self.client.delete('/remove/user2')
+        self.assertIn('{"user": 2}', delete.data)
+        self.assertIn('email@eric.com', user1query.email) # checking if db wasnt erased right after the delete request (as said in flask-testing documentation)
     
 # UPDATE ------------------------------------------------------------------------------------------------------------
 
@@ -79,12 +79,12 @@ class MyTest(BaseTestCase):
         read = self.client.get('/read')
         assert "Theres no List" in read.data
 
-    # def test_read_user(self):
-    #     user1 = Profile('user',29,'user@gg.com')
-    #     db.session.add(user1)
-    #     db.commit()
-    #     read = self.client.get('read/user')
-    #     assert 
+    def test_read_user(self):
+        user1 = Profile('user',29,'user@gg.com')
+        db.session.add(user1)
+        db.session.commit()
+        read = self.client.get('read/user')
+        self.assertIn('{"age": 29, "email": "user@gg.com", "username": "user"}', read.data) 
 
 if __name__ == '__main__':
     unittest.main()

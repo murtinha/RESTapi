@@ -1,6 +1,6 @@
 from tables import Profile
 from app import app,db
-from flask import jsonify, request
+from flask import jsonify, request, json
 # CRUD
 
 # SERVER TEST
@@ -22,12 +22,15 @@ def create():
 	db.session.add(dbcreate)
 	db.session.commit()
 	user_id = Profile.query.filter_by(username = username).first()
-	print 'User added'
-	return 'User created with id = %d' % user_id.id
+	return json.dumps(dict(user = user_id.id))
 
 # REMOVE ------------------------------------------------------------------------------------------------------------
 
-@app.route('/remove' , methods = ['DELETE'], defaults = {'name':None})
+@app.errorhandler(404)
+def handle_empty_input(error):
+	return json.dumps(dict(error = "emptyinput",
+						   message = "Invalid URL")),404
+
 @app.route('/remove/<name>', methods = ['DELETE'])
 def remove(name):
 	if name:
@@ -35,11 +38,9 @@ def remove(name):
 		user_id = dbdelete.id
 		db.session.delete(dbdelete)
 		db.session.commit()
-		print 'User Deleted'
-		return 'User with id %d deleted' % user_id
+		return json.dumps(dict(user = user_id))
 	else:
-		print 'Input name'
-		return 'Input name'	
+		raise 404	
 
 # UPDATE ------------------------------------------------------------------------------------------------------------
 
@@ -50,7 +51,6 @@ def update(name):
 	dbupdate.age = request.form['age']
 	dbupdate.email = request.form['email']
 	db.session.commit()
-	print 'User Updated'
 	return 'User Updated'
 
 # READ ------------------------------------------------------------------------------------------------------------
@@ -60,15 +60,12 @@ def update(name):
 def read(name):
 	if name:
 		dbread = Profile.query.filter_by(username = name).first()
-		print 'Username %s, Age %d, Email %s' % (dbread.username, dbread.age, dbread.email)
-		return jsonify(email = dbread.email,
-			    	   username = dbread.username,
-			    	   age= dbread.age  )
+		return json.dumps(dict(email = dbread.email,
+			    	   		   username = dbread.username,
+			    	   		   age= dbread.age))
 	else:
 		dbreadall = Profile.query.all()
 		if len(dbreadall) > 0:
-			print dbreadall
 			return 'Whole List' # didnt manage to return the columns
 		else:
-			print 'Theres no List'
 			return 'Theres no List'	
