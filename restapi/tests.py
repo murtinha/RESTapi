@@ -29,11 +29,14 @@ class MyTest(BaseTestCase):
 
     def test_add_user(self):
         response = self.client.post('/create', data = json.dumps(dict(username='hel',
-                                                                  age=24,
-                                                                  email='helgod@gamcil.com')),
-                                                                  content_type='application/json')
-        user_id = Profile.query.filter_by(username = 'hel').first()
+                                                                     age=24,
+                                                                     email='helgod@gamcil.com')),
+                                                                     content_type='application/json')
+        user= Profile.query.filter_by(username = 'hel').first()
         self.assertEqual(json.dumps(dict(user= 1)), response.data)
+        self.assertEqual('hel', user.username)
+        self.assertEqual(24, user.age)
+        self.assertEqual('helgod@gamcil.com', user.email)
     
 # DELETE ------------------------------------------------------------------------------------------------------------
 
@@ -48,7 +51,9 @@ class MyTest(BaseTestCase):
         user2query = Profile.query.filter_by(username = "user2").first()
         user2_id = user2query.id
         response = self.client.delete('/remove/user2')
-        self.assertEqual(json.dumps(dict(user= 2)), response.data)
+        removed_user = Profile.query.filter_by(username = "user2").first()
+        self.assertEqual(removed_user, None) # to guarantee that the user was removed from db
+        self.assertEqual(json.dumps(dict(user= user2query.id)), response.data)
         self.assertEqual('email@eric.com', user1query.email) # checking if db wasnt erased right after the delete request (as said in flask-testing documentation)
     
 # UPDATE ------------------------------------------------------------------------------------------------------------
@@ -57,9 +62,10 @@ class MyTest(BaseTestCase):
         user = Profile('Marta',22,'marta@mar.com')
         db.session.add(user)
         db.session.commit()
-        response = self.client.put('/update/Marta', data={'username':'Karen',
-                                                        'age':15,
-                                                        'email':'karen@ka.com'})
+        response = self.client.put('/update/Marta', data=json.dumps(dict(username= 'Karen',
+                                                                         age= 15,
+                                                                         email= 'karen@ka.com')),
+                                                                         content_type='application/json')
         userquery = Profile.query.filter_by(username='Karen').first()
         self.assertEqual('karen@ka.com', userquery.email)
 
