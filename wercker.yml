@@ -53,4 +53,4 @@ build:
     - script:
         name: python testing
         code: |
-          python tests.py
+          python restapi/tests.py
