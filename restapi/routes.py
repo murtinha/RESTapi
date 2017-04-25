@@ -45,9 +45,10 @@ def remove(name):
 @app.route('/update/<name>', methods = ['PUT'])
 def update(name):
 	dbupdate = Profile.query.filter_by(username = name).first()
-	dbupdate.username = request.form['username']
-	dbupdate.age = request.form['age']
-	dbupdate.email = request.form['email']
+	data = request.get_json()
+	dbupdate.username = data['username']
+	dbupdate.age = data['age']
+	dbupdate.email = data['email']
 	db.session.commit()
 	return 'User Updated'
 
