@@ -1,6 +1,8 @@
 from tables import Profile
 from app import app,db
 from flask import jsonify, request, json
+from exceptionsHandler import bad_request
+
 # CRUD
 
 # SERVER TEST
@@ -26,11 +28,6 @@ def create():
 
 # REMOVE ------------------------------------------------------------------------------------------------------------
 
-@app.errorhandler(404)
-def handle_empty_input(error):
-	return json.dumps(dict(error = "emptyinput",
-						   message = "Invalid URL")),404
-
 @app.route('/remove/<name>', methods = ['DELETE'])
 def remove(name):
 	if name:
@@ -40,7 +37,8 @@ def remove(name):
 		db.session.commit()
 		return json.dumps(dict(user = user_id))
 	else:
-		raise 404	
+		raise bad_request(error)
+
 
 # UPDATE ------------------------------------------------------------------------------------------------------------
 

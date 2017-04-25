@@ -4,3 +4,4 @@ config.pyc
 restapi.sublime-workspace
 routes.pyc
 tables.pyc
+exceptionsHandler.pyc

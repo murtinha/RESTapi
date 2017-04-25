@@ -22,18 +22,18 @@ class BaseTestCase(TestCase):
 class MyTest(BaseTestCase):
 
     def health_check(self):        
-        port = self.client.get('/health-check')
-        self.assertIn ('It works', port.data)
+        response = self.client.get('/health-check')
+        self.assertIn('It works', response.data)
     
 # CREATE ------------------------------------------------------------------------------------------------------------
 
     def test_add_user(self):
-        post = self.client.post('/create', data = json.dumps(dict(username='hel',
+        response = self.client.post('/create', data = json.dumps(dict(username='hel',
                                                                   age=24,
                                                                   email='helgod@gamcil.com')),
                                                                   content_type='application/json')
         user_id = Profile.query.filter_by(username = 'hel').first()
-        self.assertIn('{"user": 1}', post.data)
+        self.assertEqual(json.dumps(dict(user= 1)), response.data)
     
 # DELETE ------------------------------------------------------------------------------------------------------------
 
@@ -47,9 +47,9 @@ class MyTest(BaseTestCase):
         user1query = Profile.query.filter_by(username = "Eric").first()
         user2query = Profile.query.filter_by(username = "user2").first()
         user2_id = user2query.id
-        delete = self.client.delete('/remove/user2')
-        self.assertIn('{"user": 2}', delete.data)
-        self.assertIn('email@eric.com', user1query.email) # checking if db wasnt erased right after the delete request (as said in flask-testing documentation)
+        response = self.client.delete('/remove/user2')
+        self.assertEqual(json.dumps(dict(user= 2)), response.data)
+        self.assertEqual('email@eric.com', user1query.email) # checking if db wasnt erased right after the delete request (as said in flask-testing documentation)
     
 # UPDATE ------------------------------------------------------------------------------------------------------------
 
@@ -57,11 +57,11 @@ class MyTest(BaseTestCase):
         user = Profile('Marta',22,'marta@mar.com')
         db.session.add(user)
         db.session.commit()
-        update = self.client.put('/update/Marta', data={'username':'Karen',
+        response = self.client.put('/update/Marta', data={'username':'Karen',
                                                         'age':15,
                                                         'email':'karen@ka.com'})
         userquery = Profile.query.filter_by(username='Karen').first()
-        assert 'karen@ka.com' in userquery.email
+        self.assertEqual('karen@ka.com', userquery.email)
 
 # READ ------------------------------------------------------------------------------------------------------------
 
@@ -72,19 +72,21 @@ class MyTest(BaseTestCase):
         user2 = Profile('Bel',23,'bec@22.com')
         db.session.add(user2)
         db.session.commit()
-        read = self.client.get('/read')
-        assert "Whole List" in read.data
+        response = self.client.get('/read')
+        self.assertIn('Whole List', response.data)
 
     def test_read_no_users(self):
-        read = self.client.get('/read')
-        assert "Theres no List" in read.data
+        response = self.client.get('/read')
+        self.assertIn('Theres no List', response.data)
 
     def test_read_user(self):
         user1 = Profile('user',29,'user@gg.com')
         db.session.add(user1)
         db.session.commit()
-        read = self.client.get('read/user')
-        self.assertIn('{"age": 29, "email": "user@gg.com", "username": "user"}', read.data) 
+        response = self.client.get('read/user')
+        self.assertEqual(json.dumps(dict(username= 'user', 
+                                         age = 29,
+                                         email= 'user@gg.com')),response.data) 
 
 if __name__ == '__main__':
     unittest.main()
