@@ -1,5 +1,5 @@
 from app import db
-
+from flask import json
 # TABLE
 class Profile(db.Model):
 
@@ -14,5 +14,7 @@ class Profile(db.Model):
 		self.email = email
 
 	def __repr__(self):
-		return 'Id: %d, User: %s, Age: %d, Email: %s>' % (self.id,self.username,self.age,self.email)
+		return json.dumps(dict(user= self.username, 
+							   age= self.age, 
+							   email= self.email))
 

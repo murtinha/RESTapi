@@ -1,6 +1,6 @@
 from tables import Profile
 from app import app,db
-from flask import jsonify, request, json
+from flask import request, json
 from exceptionsHandler import bad_request
 
 # CRUD
@@ -65,6 +65,6 @@ def read(name):
 	else:
 		dbreadall = Profile.query.all()
 		if len(dbreadall) > 0:
-			return 'Whole List' # didnt manage to return the columns
+			return str(dbreadall)
 		else:
 			return 'Theres no List'	

@@ -21,7 +21,7 @@ class BaseTestCase(TestCase):
 
 class MyTest(BaseTestCase):
 
-    def health_check(self):        
+    def test_health_check(self):        
         response = self.client.get('/health-check')
         self.assertIn('It works', response.data)
     
@@ -29,9 +29,9 @@ class MyTest(BaseTestCase):
 
     def test_add_user(self):
         response = self.client.post('/create', data = json.dumps(dict(username='hel',
-                                                                     age=24,
-                                                                     email='helgod@gamcil.com')),
-                                                                     content_type='application/json')
+                                                                      age=24,
+                                                                      email='helgod@gamcil.com')),
+                                                                      content_type='application/json')
         user= Profile.query.filter_by(username = 'hel').first()
         self.assertEqual(json.dumps(dict(user= 1)), response.data)
         self.assertEqual('hel', user.username)
@@ -79,7 +79,8 @@ class MyTest(BaseTestCase):
         db.session.add(user2)
         db.session.commit()
         response = self.client.get('/read')
-        self.assertIn('Whole List', response.data)
+        users_list = str(Profile.query.all())  
+        self.assertEqual(users_list, response.data)
 
     def test_read_no_users(self):
         response = self.client.get('/read')
